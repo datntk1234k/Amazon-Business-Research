@@ -1,0 +1,25 @@
+1. Delivery Time =
+VAR TimeDiff =
+DATEDIFF('Order Information'[Time_Orderd], 'Order Information'[Time_Order_picked],
+MINUTE)
+RETURN
+IF(
+ISBLANK('Order Information'[Time_Orderd]) || ISBLANK('Order
+Information'[Time_Order_picked]) || TimeDiff < 0,
+0,
+TimeDiff
+)
+
+2. Distance = 
+SQRT(
+    POWER(
+        'Delivery Location Information'[Delivery_location_latitude] - 
+        LOOKUPVALUE('Restaurant Information'[Restaurant_latitude], 
+                    'Restaurant Information'[ID], 'Delivery Location Information'[ID]), 2
+    ) +
+    POWER(
+        'Delivery Location Information'[Delivery_location_longitude] - 
+        LOOKUPVALUE('Restaurant Information'[Restaurant_longitude], 
+                    'Restaurant Information'[ID], 'Delivery Location Information'[ID]), 2
+    )
+)

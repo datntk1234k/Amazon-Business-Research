@@ -1,0 +1,38 @@
+1. Thời gian giao hàng trung bình theo tình trạng xe:
+Average Delivery Time by Vehicle Condition =
+CALCULATE(
+AVERAGE('Order Information'[Delivery Time]),
+ALLEXCEPT('Delivery Information', 'Delivery Information'[Vehicle_condition])
+)
+
+2. Thời gian giao hàng trung bình theo thời tiết:
+Average Delivery Time by Weather =
+CALCULATE(
+AVERAGE('Order Information'[Delivery Time]),
+ALLEXCEPT('Order Information', 'Order Information'[Weather])
+)
+
+3. Thời gian giao hàng trung bình theo mật độ giao thông:
+Average Delivery Time by Traffic =
+CALCULATE(
+AVERAGE('Order Information'[Delivery Time]),
+ALLEXCEPT('Order Information', 'Order Information'[Road_traffic_density])
+) 
+
+4. Kết hợp thời tiết và mật độ giao thông:
+Average Delivery Time by Weather and Traffic =
+CALCULATE(
+AVERAGE('Order Information'[Delivery Time]),
+ALLEXCEPT('Order Information', 'Order Information'[Weather], 'Order
+Information'[Road_traffic_density])
+) 
+
+5. Thời gian giao hàng trung bình theo thành phố:
+Avg Delivery Time by City = AVERAGE('Order Information'[Delivery Time])
+
+6. Điểm trung bình của người giao hàng theo từng thành phố:
+Avg Ratings by City =
+CALCULATE(
+AVERAGE('Delivery Information'[Delivery_person_Ratings]),
+ALLEXCEPT('Order Information', 'Order Information'[City]),
+'Delivery Information'[Delivery_person_Ratings] <> BLANK()

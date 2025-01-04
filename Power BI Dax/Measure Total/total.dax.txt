@@ -1,0 +1,20 @@
+1. Total Deliveries by Weather and Traffic =
+CALCULATE(
+SUM('Delivery Information'[multiple_deliveries]),
+ALLEXCEPT('Order Information', 'Order Information'[Weather], 'Order
+Information'[Road_traffic_density])
+)
+
+2. Tổng số đơn hàng theo ngày thường:
+Total_Daily_Orders =
+CALCULATE(
+SUM('Delivery Information'[multiple_deliveries]),
+'Order Information'[Festival] = "NO"
+) 
+
+3. Tổng số đơn hàng trong dịp lễ:
+Total_Holiday_Orders =
+CALCULATE(
+SUM('Delivery Information'[multiple_deliveries]),
+'Order Information'[Festival] = "YES"
+) 
