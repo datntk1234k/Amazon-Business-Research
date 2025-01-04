@@ -38,8 +38,9 @@
 
 ## 🌟 Liên Kết Quan Trọng
 
-- **Báo cáo chi tiết**: [Xem tại đây](#)
-- **Công thức DAX**: [Xem tại đây](#)
+- **Báo cáo chi tiết**: [Xem tại đây](https://github.com/datntk1234k/Amazon-Business-Research/blob/main/Reporting/Amazon%20Business%20Research.pdf)
+- - **Query SQL Sever**: [Xem tại đây](https://github.com/datntk1234k/Amazon-Business-Research/blob/main/SQL%20Sever/query.sql)
+- **Công thức DAX**: [Xem tại đây](https://github.com/datntk1234k/Amazon-Business-Research/tree/main/Power%20BI%20Dax)
 
 ## 👨‍💻 Người Thực Hiện
 
